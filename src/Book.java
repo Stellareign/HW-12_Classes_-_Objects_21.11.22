@@ -9,10 +9,10 @@ public class Book { // класс
         this.pageAmount = pageAmount;
         this.publishName = publishName;
         this.publishYear = publishYear;
-        System.out.print(bookName + ",");
-        System.out.print(pageAmount + " стр.,");
-        System.out.print(" " + publishName + ",");
-        System.out.println(" " + publishYear + " г.");
+        System.out.print(bookName + ", ");
+        System.out.print(pageAmount + " стр., ");
+        System.out.print(publishName + ", ");
+        System.out.println(publishYear + " г.");
         System.out.println("" +
                 "");
     }
