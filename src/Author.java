@@ -2,10 +2,10 @@ public class Author {
     static String authorName;
     public Author(String authorName) {
         this.authorName = authorName;
-        System.out.println(setAuthorName());
+        System.out.println(getAuthorName());
     }
 
-    public String setAuthorName() {
+    public String getAuthorName() {
         return this.authorName;
 
     }
