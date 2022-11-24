@@ -30,15 +30,15 @@ public class Book { // класс
     }
     public void setPageAmount(int pageAmount) {
         this.pageAmount = pageAmount;
-        System.out.println(bookName +  " " + "pageAmount = " + pageAmount);
+        System.out.println(bookName +  " " + "Количество страниц: =" + pageAmount);
     }
 
     public void setPublishName(String publishName) {
         this.publishName = publishName;
-        System.out.println(bookName + " " + "publishName = " + publishName);
+        System.out.println(bookName + " " + "Издательство = " + publishName);
     }
     public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
-        System.out.println(bookName +" " + "publishYear = " + publishYear); // а можно ли сюда подключить класс Author, и вызывать его в мэйне через Book?
+        System.out.println(bookName +" " + "Год издания = " + publishYear); // а можно ли сюда подключить класс Author, и вызывать его в мэйне через Book?
     }
 }
