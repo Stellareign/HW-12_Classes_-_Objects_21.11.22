@@ -9,23 +9,36 @@ public class Book { // класс
         this.pageAmount = pageAmount;
         this.publishName = publishName;
         this.publishYear = publishYear;
-        System.out.print(setBookName() + ", ");
-        System.out.print(setPageAmount() + " стр., ");
-        System.out.print(setPublishName() + ", ");
-        System.out.println(setPublishYear() + " г.");
+        System.out.print(getBookName() + ", ");
+        System.out.print(getPageAmount() + " стр., ");
+        System.out.print(getPublishName() + ", ");
+        System.out.println(getPublishYear() + " г.");
         System.out.println("" +
                 "");
     }
-    public String setBookName() {
+    public String getBookName() {
         return this.bookName;
     }
-    public int setPageAmount() {
+    public int getPageAmount() {
         return this.pageAmount;
     }
-    public String setPublishName() {
+    public String getPublishName() {
         return this.publishName;
     }
-    public int setPublishYear() {
+    public int getPublishYear() {
         return this.publishYear;
+    }
+    public void setPageAmount(int pageAmount) {
+        this.pageAmount = pageAmount;
+        System.out.println(bookName +  " " + "pageAmount = " + pageAmount);
+    }
+
+    public void setPublishName(String publishName) {
+        this.publishName = publishName;
+        System.out.println(bookName + " " + "publishName = " + publishName);
+    }
+    public void setPublishYear(int publishYear) {
+        this.publishYear = publishYear;
+        System.out.println(bookName +" " + "publishYear = " + publishYear); // а можно ли сюда подключить класс Author, и вызывать его в мэйне через Book?
     }
 }

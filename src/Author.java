@@ -1,5 +1,5 @@
 public class Author {
-    static String authorName;
+    String authorName;
     public Author(String authorName) {
         this.authorName = authorName;
         System.out.println(getAuthorName());
