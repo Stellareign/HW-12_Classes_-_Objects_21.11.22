@@ -1,12 +1,12 @@
 public class Author {
-    String authorName;
+  private final String authorName;
     public Author(String authorName) {
         this.authorName = authorName;
-        System.out.println(getAuthorName());
-    }
+        System.out.println(authorName + ":");
+           }
 
     public String getAuthorName() {
-        return this.authorName;
+        return authorName;
 
     }
 
