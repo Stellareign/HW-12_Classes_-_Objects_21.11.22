@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 public class Book { // класс
-    public final Author author;
+    public final Author author; // так же final по "совету" Java
     String bookName;
     int pageAmount;
     String publishName;
@@ -12,12 +12,10 @@ public class Book { // класс
         this.pageAmount = pageAmount;
         this.publishName = publishName;
         this.publishYear = publishYear;
-        System.out.print(getBookName() + ", ");
-        System.out.print(getPageAmount() + " стр., ");
-        System.out.print(getPublishName() + ", ");
-        System.out.println(getPublishYear() + " г.");
+        System.out.print(getBookName() + ", "+ getPageAmount() + " стр., " + getPublishName() + ", " + getPublishYear() + " г.");
+        // хотелось вывод на печать автора прописать здесь же
         System.out.println("" +
-                "");
+                ""); // да, здесь затупила сначала, можно ж было всё в одной строке написать
     }
 
     public Author getAuthor() {
@@ -45,7 +43,7 @@ public class Book { // класс
     public void setPageAmount(int pageAmount) {
         this.pageAmount = pageAmount;
 
-        System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear+ " г.");
+        System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear+ " г."); // очень хочется здесь же вписать корректно автора
     }
 
     public void setPublishName(String publishName) {
@@ -64,3 +62,4 @@ public class Book { // класс
 }
 // Мне хотелось сделать так, чтобы в мэйне нужно было бы забивать только данные книг, а вся печать оставалась бы в методе другого класса, но
 // у меня не получается сделать корректную ссылку на автора в сеттерах класса book, чтобы в классе main он выводился в соответствии с книгой.
+// все попытки привели либо к непонятной ссылке на автора типа Author@617c74e5, либо Null, либо выводит самое первое имя.
