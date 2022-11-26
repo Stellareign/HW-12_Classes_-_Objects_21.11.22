@@ -14,7 +14,7 @@ public class Main {
 
         book1.setPublishName("Юго-Восток");
 
-        book2.setPublishYear(2203);
+        book2.setPublishYear(2023);
     }
 
 }

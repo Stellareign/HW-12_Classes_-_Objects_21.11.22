@@ -13,7 +13,7 @@ public class Book { // класс
         this.publishName = publishName;
         this.publishYear = publishYear;
         System.out.println(author + ": " + getBookName() + ", "+ getPageAmount() + " стр., " + getPublishName() + ", " + getPublishYear() + " г.");
-        // хотелось вывод на печать автора прописать здесь же
+
         System.out.println("" +
                 ""); // да, здесь затупила сначала, можно ж было всё в одной строке написать
     }
