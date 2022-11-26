@@ -62,4 +62,3 @@ public class Book { // класс
         System.out.println(author + ": " + bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear + " г.");
     }
 }
-//
