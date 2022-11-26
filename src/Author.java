@@ -10,4 +10,7 @@ public class Author {
 
     }
 
+    public final String toString() {
+        return authorName;
+    }
 }
