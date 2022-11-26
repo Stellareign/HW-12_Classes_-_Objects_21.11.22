@@ -7,9 +7,9 @@ public class Main {
         Book book1 = new Book(author,"Час быка", 700, "Правда", 1985);
         Author author2 = new Author("Джером К. Джером");
         Book book2 = new Book(author,"Трое в лодке, не считая собаки", 348, "Вышайшая школа", 1993);
-        System.out.println(author2.getAuthorName() + ":");
+
         book2.setPageAmount(452);
-        System.out.println(author.getAuthorName() + ":");
+
         book.setPublishName("Юго-Восток");
         System.out.println(author1.getAuthorName() + ":");
         book1.setPublishYear(2203);
