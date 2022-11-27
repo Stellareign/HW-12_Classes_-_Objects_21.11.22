@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.Objects;
+
 public class Book { // класс
     public final Author author; // так же final по "совету" Java
     String bookName;
@@ -12,12 +14,12 @@ public class Book { // класс
         this.pageAmount = pageAmount;
         this.publishName = publishName;
         this.publishYear = publishYear;
-        System.out.println(getBookName() + ", "+ getPageAmount() + " стр., " + getPublishName() + ", " + getPublishYear() + " г.");
-        // хотелось вывод на печать автора прописать здесь же
-        System.out.println("" +
-                ""); // да, здесь затупила сначала, можно ж было всё в одной строке написать
+
     }
 
+    public Author getAuthor() {
+        return this.author;
+    }
 
     public String getBookName() {
 
@@ -40,24 +42,44 @@ public class Book { // класс
 
     public void setPageAmount(int pageAmount) {
         this.pageAmount = pageAmount;
+        System.out.println("Замена кол-ва страниц:");
 
-        System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear+ " г."); // очень хочется здесь же вписать корректно автора
     }
 
     public void setPublishName(String publishName) {
         this.publishName = publishName;
-        System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear+ " г.");
+        System.out.println("Замена издательства:");
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        System.out.println("Сравнение книг: "); // хотела добиться, чтобы выводились разные сообщения при true и false, но не получилось. Этого можно добиться здесь?
+        return pageAmount == book.pageAmount && publishYear == book.publishYear && author.equals(book.author) && bookName.equals(book.bookName)
+                && publishName.equals(book.publishName);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author, bookName, pageAmount, publishName, publishYear);
     }
 
     public void setPublishYear(int publishYear) {
-    int currentYear = LocalDate.now().getYear();
-        if (publishYear > currentYear) {
-            System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + "Ошибка: год издания не может быть больше текущего");
-            return;
-        }
-        System.out.println(bookName + ", " + pageAmount + ", " + publishName + ", " + publishYear + " г.");
+        int currentYear = LocalDate.now().getYear();
+        if (publishYear > currentYear)
+            System.out.println("Замена года издания:");
+        System.out.println("Ошибка: год издания не может быть больше текущего");
+        return ;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Книга: " + author + ", " + bookName + ", " + pageAmount + " стр., " + publishName + ", " + publishYear + " г.";
+
     }
 }
-// Мне хотелось сделать так, чтобы в мэйне нужно было бы забивать только данные книг, а вся печать оставалась бы в методе другого класса, но
-// у меня не получается сделать корректную ссылку на автора в сеттерах класса book, чтобы в классе main он выводился в соответствии с книгой.
-// все попытки привели либо к непонятной ссылке на автора типа Author@617c74e5, либо Null, либо выводит самое первое имя.
