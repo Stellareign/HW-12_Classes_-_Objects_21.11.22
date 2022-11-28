@@ -1,27 +1,27 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашка 12, Классы и объекты. Задача 1:");
-        Author author1 = new Author("Роджер Желязны");
+        Author author1 = new Author("Роджер", "Желязны");
         Book book1 = new Book(author1, "Хроники Эмбера", 245, "Северо-Запад", 1992);
         System.out.println(book1);
         System.out.println("" +
                 "");
-        Author author2 = new Author("Иван Ефремов");
+        Author author2 = new Author("Иван", "Ефремов");
         Book book2 = new Book(author2,"Час быка", 489, "Правда", 1970);
         System.out.println(book2);
         System.out.println("" +
                 "");
-        Author author3 = new Author("Джером К. Джером");
+        Author author3 = new Author("Джером", "К. Джером");
         Book book3 = new Book(author3,"Трое в лодке, не считая собаки", 348, "Вышайшая школа", 1993);
         System.out.println(book3);
         System.out.println("" +
                 "");
-        Author author4 = new Author("Иван Ефремов");
+        Author author4 = new Author("Иван", "Ефремов");
         Book book4 = new Book(author4, "Час быка", 512, "Эксмо", 2022);
         System.out.println(book4);
         System.out.println("" +
                 "");
-        Book book5 = new Book(new Author("Джером К. Джером"),"Трое в лодке, не считая собаки", 348, "Вышайшая школа", 1993);
+        Book book5 = new Book(new Author("Джером", "К. Джером"),"Трое в лодке, не считая собаки", 348, "Вышайшая школа", 1993);
         System.out.println(book5);
         System.out.println("" +
                 "");
@@ -49,8 +49,10 @@ public class Main {
         System.out.println("" +
                 "");
 
-        book3.setPublishYear(2023);
-        System.out.println(book3);
+        book4.setPublishYear(2023);
+        System.out.println(book4);
+        book1.setPublishYear(1999);
+        System.out.println(book1);
         System.out.println("" +
                 "");
         System.out.println("hashCodes:"); // проверка хэшей
