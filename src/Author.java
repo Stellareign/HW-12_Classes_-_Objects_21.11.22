@@ -19,7 +19,7 @@ public class Author {
         return authorSurname;
 
     }
-
+    @Override
     public final String toString() {
         return authorName + " " + authorSurname;
     }
